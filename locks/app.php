@@ -37,6 +37,7 @@ function getLock(PredisClient $client, $key)
     // attempts to acquire a lock and 
     for ($i = 0; $i < 3; $i++) {
 
+        // Set with TTL = 3 and fails if already set (NX)
         $lock = $client->set($key, time(), 'EX', 3, 'NX');
         if ($lock) {
             return true;

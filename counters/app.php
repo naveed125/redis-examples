@@ -2,11 +2,9 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-// uses Predis
-// see https://github.com/nrk/predis
-$client = new Predis\Client();
-
 // connect to the local redis server
+echo("Connecting to redis ...\n");
+$client = new Predis\Client('tcp://redis:6379');
 $client->connect();
 
 // increment the counter in a loop

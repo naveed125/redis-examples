@@ -2,7 +2,7 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-const MAX_VALUES = 10000;
+const MAX_VALUES = 100000;
 
 // Record the start time
 $startTime = microtime(true);

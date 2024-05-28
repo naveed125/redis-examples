@@ -61,8 +61,9 @@ PUB: Sent hello.
 * No issues found as a drop in replacement
 * Slightly slower performance then redis (checkout `stress/app.php`)
 
-## [ValKey](https://github.com/valkey-io/valkey) Use valkey-compose.yml [❌]
-Use valkey-compose.yml
+## [ValKey](https://github.com/valkey-io/valkey) Use valkey-compose.yml [✔️]
+* Use valkey-compose.yml
+* Great performance
 
 ## [KeyDB](https://docs.keydb.dev/) Use keydb-compose.yml [❌] 
-Use keydb-compose.yml
+* Use keydb-compose.yml

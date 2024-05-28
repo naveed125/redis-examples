@@ -14,9 +14,9 @@ print_r($user);
  */
 function get_user($id)
 {
-    $client = new PredisClient();
-
     // connect to the local redis server
+    echo("Connecting to redis ...\n");
+    $client = new Predis\Client('tcp://redis:6379');
     $client->connect();
 
     // check redis

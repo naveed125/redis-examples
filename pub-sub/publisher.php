@@ -2,16 +2,15 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-// uses Predis see https://github.com/nrk/predis
-$client = new Predis\Client();
-
 // connect to the local redis server
+echo("PUB: Connecting to redis ...\n");
+$client = new Predis\Client('tcp://redis:6379');
 $client->connect();
 
 // Read input from user and send to channel
-echo "Press CTRL-C to stop.\n";
+echo("PUB: Press CTRL-C to stop.\n");
 while(true) {
-    $message = readline("Enter a Message:");
+    $message = readline("PUB: Enter a Message:");
     $client->publish('channel', $message);
-    echo ("Sent {$message}.\n");
+    echo ("PUB: Sent {$message}.\n");
 }

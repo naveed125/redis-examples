@@ -4,26 +4,28 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use Predis\Client as PredisClient;
 
-// uses Predis
-// see https://github.com/nrk/predis
-$client = new PredisClient();
 
 // connect to the local redis server
+echo("Connecting to redis ...\n");
+$client = new Predis\Client('tcp://redis:6379');
 $client->connect();
 
 // synchronized code block
 $key = 'lock';
+echo("Acquiring lock ...\n");
 if(getLock($client, $key)) {
     echo "Lock acquired\n";
 
     // do something useful here
+    echo("Sleeping for a bit ...\n");
     sleep(1);
 
     // release the lock
+    echo("Releasing the lock ...\n");
     $client->del([$key]);
 }
 else {
-    echo ("Failed to acquire lock\n");
+    echo("Failed to acquire lock.\n");
 }
 
 /**

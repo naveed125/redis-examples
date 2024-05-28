@@ -53,6 +53,12 @@ PUB: Sent hey.
 PUB: Enter a Message:hello
 PUB: Sent hello.
 
+% docker exec -it redis-examples-php-1 php stress/app.php
+Connecting to redis ...
+Setting 100000 values ...
+Getting 100000 values randomly ...
+Execution time: 24.030764818192 seconds
+
 ```
 
 # What are the alternatives

@@ -1,8 +1,8 @@
 # Redis Examples
-This is companion code for [The Amazing Redis](https://medium.com/@naveed125/the-amazing-redis-620a621f3b2) blog post.
+This is companion code for [The Amazing Redis](https://medium.com/swlh/the-amazing-redis-620a621f3b2) blog post.
 
 # How to run
-Originally written for the [Redis](redis.io), this code can now be used to test some of the redis alternatives as well, it provides a quick test of how much of a drop-in replacements these alternatives are.
+Originally written for the [Redis](https://redis.io), this code can now be used to test some of the redis alternatives as well, it provides a quick test of how much of a drop-in replacements these alternatives are.
 
 ```
 % docker compose -f redis-compose.yml up -d
@@ -56,11 +56,13 @@ PUB: Sent hello.
 ```
 
 # What are the alternatives:
-1. [Microsoft Garnet](https://github.com/microsoft/garnet)
-Use garnet-compose.yml
+## [Microsoft Garnet](https://github.com/microsoft/garnet) [✔️] 
+* Use garnet-compose.yml
+* No issues found as a drop in replacement
+* Slightly slower performance then redis (checkout `stress/app.php`)
 
-2. [ValKey](https://github.com/valkey-io/valkey)
+## [ValKey](https://github.com/valkey-io/valkey) Use valkey-compose.yml [❌]
 Use valkey-compose.yml
 
-3. [KeyDB](https://docs.keydb.dev/)
+## [KeyDB](https://docs.keydb.dev/) Use keydb-compose.yml [❌] 
 Use keydb-compose.yml

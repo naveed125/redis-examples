@@ -60,7 +60,7 @@ PUB: Sent hello.
 Here are some of the alternatives I tested with docker. Note that my testing was not comprehensive but did show the use cases from my blog post. In terms of features, no issues
 were found as drop-in replacement. If you are trying them side by side, try running `./stress/app.php`
 
-## [ValKey](https://github.com/valkey-io/valkey) Use valkey-compose.yml [✔️]
+## [ValKey](https://github.com/valkey-io/valkey) [✔️]
 * Use valkey-compose.yml
 * Great performance.
 
@@ -68,6 +68,6 @@ were found as drop-in replacement. If you are trying them side by side, try runn
 * Use garnet-compose.yml
 * Slightly slower performance then redis.
 
-## [KeyDB](https://docs.keydb.dev/) Use keydb-compose.yml [✔️]
+## [KeyDB](https://docs.keydb.dev/) [✔️]
 * Use keydb-compose.yml
 * Slightly slower performace then Garnet.

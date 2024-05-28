@@ -55,15 +55,19 @@ PUB: Sent hello.
 
 ```
 
-# What are the alternatives:
-## [Microsoft Garnet](https://github.com/microsoft/garnet) [✔️] 
-* Use garnet-compose.yml
-* No issues found as a drop in replacement
-* Slightly slower performance then redis (checkout `stress/app.php`)
+# What are the alternatives
+
+Here are some of the alternatives I tested with docker. Note that my testing was not comprehensive but did show the use cases from my blog post. In terms of features, no issues
+were found as drop-in replacement. If you are trying them side by side, try running `./stress/app.php`
 
 ## [ValKey](https://github.com/valkey-io/valkey) Use valkey-compose.yml [✔️]
 * Use valkey-compose.yml
-* Great performance
+* Great performance.
 
-## [KeyDB](https://docs.keydb.dev/) Use keydb-compose.yml [❌] 
+## [Garnet](https://github.com/microsoft/garnet) [✔️] 
+* Use garnet-compose.yml
+* Slightly slower performance then redis.
+
+## [KeyDB](https://docs.keydb.dev/) Use keydb-compose.yml [✔️]
 * Use keydb-compose.yml
+* Slightly slower performace then Garnet.
